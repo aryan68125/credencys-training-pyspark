@@ -1,0 +1,3 @@
+This is the text for file gear_1.txt file
+New file createdThis is a text file for the gear_1.txt file
+Already existing file
