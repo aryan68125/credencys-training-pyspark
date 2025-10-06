@@ -1,0 +1,7 @@
+name : Rollex, roll_no : 997
+name : Ballistic, roll_no : 1000
+name : Barricade, roll_no : 247
+name : Barbatos, roll_no : 117
+name : Bullet, roll_no : 762
+name : Shotgun, roll_no : 12
+name : ShockWave, roll_no : 360
