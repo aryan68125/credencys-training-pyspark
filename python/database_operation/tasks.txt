@@ -1,4 +1,5 @@
 6th october 2025
+- Insert data using sql query in the customers table in the database using sql alchemy in python.
 - Created a function to insert random customer's data in the customers table in the database.
 - Restructured the code a little bit made sure all the supporting function are kept above.
 
