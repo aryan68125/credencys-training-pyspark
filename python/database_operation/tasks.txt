@@ -2,6 +2,7 @@
 - Insert data using sql query in the customers table in the database using sql alchemy in python.
 - Created a function to insert random customer's data in the customers table in the database.
 - Restructured the code a little bit made sure all the supporting function are kept above.
+- Added a function that automatically detects the os on which the python code is running on and changes the env dir accordingly so as to make sure that jupyter notebook always knows here to look for env file to make a successfull database connection using sqlalchemy.
 
 
 
