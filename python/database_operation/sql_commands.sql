@@ -22,6 +22,7 @@ DROP TABLE salaries;
 DROP TABLE school_details;
 DROP TABLE schools;
 DROP TABLE student_grades;
+DROP TABLE students;
 
 TRUNCATE TABLE customers;
 TRUNCATE TABLE products;
@@ -34,6 +35,7 @@ TRUNCATE TABLE salaries;
 TRUNCATE TABLE school_details;
 TRUNCATE TABLE schools;
 TRUNCATE TABLE student_grades;
+TRUNCATE TABLE students;
 
 SELECT * FROM customers;
 SELECT * FROM products;
@@ -46,3 +48,4 @@ SELECT * FROM salaries;
 SELECT * FROM school_details;
 SELECT * FROM schools;
 SELECT * FROM student_grades;
+SELECT * FROM students;
