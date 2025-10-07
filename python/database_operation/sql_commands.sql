@@ -49,3 +49,11 @@ SELECT * FROM school_details;
 SELECT * FROM schools;
 SELECT * FROM student_grades;
 SELECT * FROM students;
+
+-- 
+SELECT grade_level, AVG(gpa) AS avg_gpa
+FROM students
+WHERE school_lunch = true
+GROUP BY grade_level
+HAVING AVG(gpa) < 3.3
+ORDER BY grade_level;
