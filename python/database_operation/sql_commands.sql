@@ -12,6 +12,16 @@ INSERT INTO test_table (name,roll_no,city) VALUES
 SELECT * FROM test_table;
 
 DROP TABLE customers;
+DROP TABLE products;
+DROP TABLE orders;
+DROP TABLE country_stats;
+DROP TABLE happiness_scores;
+DROP TABLE inflation_rates;
+DROP TABLE players;
+DROP TABLE salaries;
+DROP TABLE school_details;
+DROP TABLE schools;
+DROP TABLE student_grades;
 
 TRUNCATE TABLE customers;
 TRUNCATE TABLE products;
@@ -20,6 +30,10 @@ TRUNCATE TABLE country_stats;
 TRUNCATE TABLE happiness_scores;
 TRUNCATE TABLE inflation_rates;
 TRUNCATE TABLE players;
+TRUNCATE TABLE salaries;
+TRUNCATE TABLE school_details;
+TRUNCATE TABLE schools;
+TRUNCATE TABLE student_grades;
 
 SELECT * FROM customers;
 SELECT * FROM products;
@@ -28,3 +42,7 @@ SELECT * FROM country_stats;
 SELECT * FROM happiness_scores;
 SELECT * FROM inflation_rates;
 SELECT * FROM players;
+SELECT * FROM salaries;
+SELECT * FROM school_details;
+SELECT * FROM schools;
+SELECT * FROM student_grades;
