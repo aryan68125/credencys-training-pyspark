@@ -58,11 +58,9 @@ GROUP BY grade_level
 HAVING AVG(gpa) < 3.3
 ORDER BY grade_level;
 
-
--- Practice of conditional statements in sql
-SELECT student_name, gpa, CASE 
-WHEN grade_level = 9 THEN 'Fresher'
-WHEN grade_level = 10 THEN 'Sophomore'
-WHEN grade_level = 11 THEN 'Junior'
-ELSE 'Senior' END AS grad_title
-FROM students ORDER BY gpa DESC;
+--This command was not working properly in jupyter notebook
+SELECT e1.employees_name , e1.salary , e2.employees_name , e2.salary 
+FROM employees e1 
+    INNER JOIN employees e2 ON e1.salary = e2.salary
+    WHERE e1.employees_name <> e2.employees_name
+        AND e1.employees_id > e2.employees_id;
