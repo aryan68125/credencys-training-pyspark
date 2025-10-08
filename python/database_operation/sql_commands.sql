@@ -57,3 +57,12 @@ WHERE school_lunch = true
 GROUP BY grade_level
 HAVING AVG(gpa) < 3.3
 ORDER BY grade_level;
+
+
+-- Practice of conditional statements in sql
+SELECT student_name, gpa, CASE 
+WHEN grade_level = 9 THEN 'Fresher'
+WHEN grade_level = 10 THEN 'Sophomore'
+WHEN grade_level = 11 THEN 'Junior'
+ELSE 'Senior' END AS grad_title
+FROM students ORDER BY gpa DESC;
