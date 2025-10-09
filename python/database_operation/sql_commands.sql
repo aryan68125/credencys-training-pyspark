@@ -23,6 +23,7 @@ DROP TABLE school_details;
 DROP TABLE schools;
 DROP TABLE student_grades;
 DROP TABLE students;
+DROP TABLE employees;
 
 TRUNCATE TABLE customers;
 TRUNCATE TABLE products;
@@ -75,3 +76,18 @@ FROM employees e1
 	SELECT p1.product_name,p1.unit_price,p2.product_name,p2.unit_price 
 	FROM products p1 
 		INNER JOIN products p2 ON p1.unit_price - p2.unit_price = 0.25;
+
+
+	SELECT p1.product_name, p1.unit_price, p2.product_name, p2.unit_price,
+	p1.unit_price - p2.unit_price AS price_difference
+	FROM products p1
+	    INNER JOIN products p2 ON p1.product_id <> p2.product_id 
+	    WHERE ABS(p1.unit_price - p2.unit_price) < 0.25;
+
+	SELECT p1.product_name, p1.unit_price, p2.product_name, p2.unit_price,
+	p1.unit_price - p2.unit_price AS price_difference
+	FROM products p1
+	    INNER JOIN products p2 ON p1.product_id <> p2.product_id 
+	    WHERE ABS(p1.unit_price - p2.unit_price) = 0.25
+	    AND p1.product_id < p2.product_id
+	    ORDER BY price_difference DESC;
