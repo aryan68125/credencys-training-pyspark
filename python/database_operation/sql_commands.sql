@@ -71,23 +71,23 @@ FROM employees e1
     INNER JOIN employees e2 ON e1.salary > e2.salary
     WHERE e1.employees_name <> e2.employees_name AND e1.employees_id > e2.employees_id;
 
-	--Write a query to determine which products are within 25 cents from each other 
-	--in terms of unit price and return a lits of all the candy pairs.
-	SELECT p1.product_name,p1.unit_price,p2.product_name,p2.unit_price 
-	FROM products p1 
-		INNER JOIN products p2 ON p1.unit_price - p2.unit_price = 0.25;
+--Write a query to determine which products are within 25 cents from each other 
+--in terms of unit price and return a lits of all the candy pairs.
+SELECT p1.product_name,p1.unit_price,p2.product_name,p2.unit_price 
+FROM products p1 
+	INNER JOIN products p2 ON p1.unit_price - p2.unit_price = 0.25;
 
 
-	SELECT p1.product_name, p1.unit_price, p2.product_name, p2.unit_price,
-	p1.unit_price - p2.unit_price AS price_difference
-	FROM products p1
-	    INNER JOIN products p2 ON p1.product_id <> p2.product_id 
-	    WHERE ABS(p1.unit_price - p2.unit_price) < 0.25;
+SELECT p1.product_name, p1.unit_price, p2.product_name, p2.unit_price,
+p1.unit_price - p2.unit_price AS price_difference
+FROM products p1
+	INNER JOIN products p2 ON p1.product_id <> p2.product_id 
+	WHERE ABS(p1.unit_price - p2.unit_price) < 0.25;
 
-	SELECT p1.product_name, p1.unit_price, p2.product_name, p2.unit_price,
-	p1.unit_price - p2.unit_price AS price_difference
-	FROM products p1
-	    INNER JOIN products p2 ON p1.product_id <> p2.product_id 
-	    WHERE ABS(p1.unit_price - p2.unit_price) = 0.25
-	    AND p1.product_id < p2.product_id
-	    ORDER BY price_difference DESC;
+SELECT p1.product_name, p1.unit_price, p2.product_name, p2.unit_price,
+p1.unit_price - p2.unit_price AS price_difference
+FROM products p1
+	INNER JOIN products p2 ON p1.product_id <> p2.product_id 
+	WHERE ABS(p1.unit_price - p2.unit_price) = 0.25
+	AND p1.product_id < p2.product_id
+	ORDER BY price_difference DESC;
