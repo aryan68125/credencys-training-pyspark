@@ -91,3 +91,13 @@ FROM products p1
 	WHERE ABS(p1.unit_price - p2.unit_price) = 0.25
 	AND p1.product_id < p2.product_id
 	ORDER BY price_difference DESC;
+
+-- UNION should not have returned duplicate values but I am getting "Hoodie" as a duplicate value in the result
+SELECT * FROM tops 
+UNION
+SELECT * FROM outerwear;
+
+-- I tried resolving the issue using this but it dint make any difference
+SELECT id,TRIM(LOWER(type)) FROM tops 
+UNION 
+SELECT id,TRIM(LOWER(type)) FROM outerwear;
