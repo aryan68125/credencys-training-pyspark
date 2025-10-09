@@ -43,6 +43,7 @@ SELECT * FROM products;
 SELECT * FROM orders;
 SELECT * FROM country_stats;
 SELECT * FROM happiness_scores;
+SELECT * FROM happiness_scores_current;
 SELECT * FROM inflation_rates;
 SELECT * FROM players;
 SELECT * FROM salaries;
@@ -58,6 +59,9 @@ WHERE school_lunch = true
 GROUP BY grade_level
 HAVING AVG(gpa) < 3.3
 ORDER BY grade_level;
+
+-- PRACTICE : 
+
 
 --This command was not working properly in jupyter notebook but they works just fine in PGAdmin
 SELECT e1.employees_name , e1.salary , e2.employees_name , e2.salary 
