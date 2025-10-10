@@ -63,7 +63,8 @@ ORDER BY grade_level;
 -- PRACTICE : 
 
 
---This command was not working properly in jupyter notebook but they works just fine in PGAdmin
+--The sql queries below were not working properly in jupyter notebook 
+-- but they works just fine in PGAdmin Hence I have written it here
 SELECT e1.employees_name , e1.salary , e2.employees_name , e2.salary 
 FROM employees e1 
     INNER JOIN employees e2 ON e1.salary = e2.salary
@@ -122,3 +123,20 @@ SELECT hs.year, hs.country, hs.happiness_score, country_hs.avg_hs_by_country
 FROM happiness_scores hs
     LEFT JOIN country_hs 
     ON hs.country = country_hs.country;
+
+-- Compare 2022 vs 2023 happiness scores side by side.
+WITH happiness_scores_2022 AS 
+    (
+        SELECT hs_2022.year, hs_2022.country, hs_2022.happiness_score 
+            FROM happiness_scores AS hs_2022 WHERE year = 2022
+    ),
+    happiness_scores_2023 AS 
+    (
+        SELECT hs_2023.year,hs_2023.country,hs_2023.happiness_score 
+            FROM happiness_scores AS hs_2023 WHERE year = 2023
+    )
+
+SELECT * 
+    FROM happiness_scores_2022 as hs_2022 
+    INNER JOIN happiness_scores_2023 as hs_2023
+    ON hs_2022.country = hs_2023.country;
