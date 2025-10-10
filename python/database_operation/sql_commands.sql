@@ -105,3 +105,15 @@ SELECT * FROM outerwear;
 SELECT id,TRIM(LOWER(type)) FROM tops 
 UNION 
 SELECT id,TRIM(LOWER(type)) FROM outerwear;
+
+--Since CTE related sql queries are not working on jupyter notebook I am going to write the sql
+--queries related to CTE in PgAdmin sql file.
+WITH country_hs AS 
+    (SELECT country, AVG(happiness_score) AS avg_hs_by_country
+    FROM happiness_scores
+    GROUP BY country)
+
+SELECT hs.year, hs.country, hs.happiness_score, country_hs.avg_hs_by_country 
+FROM happiness_scores hs
+    LEFT JOIN country_hs 
+    ON hs.country = country_hs.country;
