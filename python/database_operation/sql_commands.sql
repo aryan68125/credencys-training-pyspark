@@ -111,6 +111,8 @@ SELECT id,TRIM(LOWER(type)) FROM outerwear;
 
 --Goal : Return each country's happiness score for the year alongside the 
 -- country's average happiness score
+-- A slight update I have resolved the issue of table not being shown in 
+--python in jupyter notebook 
 WITH country_hs AS 
     (SELECT country, AVG(happiness_score) AS avg_hs_by_country
     FROM happiness_scores
