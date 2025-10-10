@@ -108,6 +108,9 @@ SELECT id,TRIM(LOWER(type)) FROM outerwear;
 
 --Since CTE related sql queries are not working on jupyter notebook I am going to write the sql
 --queries related to CTE in PgAdmin sql file.
+
+--Goal : Return each country's happiness score for the year alongside the 
+-- country's average happiness score
 WITH country_hs AS 
     (SELECT country, AVG(happiness_score) AS avg_hs_by_country
     FROM happiness_scores
