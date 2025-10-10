@@ -140,3 +140,23 @@ SELECT *
     FROM happiness_scores_2022 as hs_2022 
     INNER JOIN happiness_scores_2023 as hs_2023
     ON hs_2022.country = hs_2023.country;
+
+
+-- Compare 2022 vs 2023 happiness scores side by side. 
+-- WHERE happiness score for 2023 is greater than 2022 
+WITH happiness_scores_2022 AS 
+    (
+        SELECT hs_2022.year, hs_2022.country, hs_2022.happiness_score 
+            FROM happiness_scores AS hs_2022 WHERE year = 2022
+    ),
+    happiness_scores_2023 AS 
+    (
+        SELECT hs_2023.year,hs_2023.country,hs_2023.happiness_score 
+            FROM happiness_scores AS hs_2023 WHERE year = 2023
+    )
+
+SELECT * 
+    FROM happiness_scores_2022 as hs_2022 
+    INNER JOIN happiness_scores_2023 as hs_2023
+    ON hs_2022.country = hs_2023.country
+    WHERE hs_2022.happiness_score < hs_2023.happiness_score;
