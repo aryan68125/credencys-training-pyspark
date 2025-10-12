@@ -23,6 +23,7 @@ DROP TABLE school_details;
 DROP TABLE schools;
 DROP TABLE student_grades;
 DROP TABLE students;
+DROP TABLE employees;
 
 TRUNCATE TABLE customers;
 TRUNCATE TABLE products;
@@ -36,6 +37,7 @@ TRUNCATE TABLE school_details;
 TRUNCATE TABLE schools;
 TRUNCATE TABLE student_grades;
 TRUNCATE TABLE students;
+TRUNCATE TABLE employees;
 
 SELECT * FROM customers;
 SELECT * FROM products;
@@ -49,6 +51,7 @@ SELECT * FROM school_details;
 SELECT * FROM schools;
 SELECT * FROM student_grades;
 SELECT * FROM students;
+SELECT * FROM employees;
 
 -- 
 SELECT grade_level, AVG(gpa) AS avg_gpa
