@@ -25,6 +25,10 @@ DROP TABLE schools;
 DROP TABLE student_grades;
 DROP TABLE students;
 DROP TABLE employees;
+DROP TABLE outerwear;
+DROP TABLE sizes;
+DROP TABLE tops;
+DROP TABLE test_table;
 
 TRUNCATE TABLE customers;
 TRUNCATE TABLE products;
